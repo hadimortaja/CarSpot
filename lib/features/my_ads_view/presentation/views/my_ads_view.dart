@@ -1352,8 +1352,6 @@ class MyAdsView extends StatelessWidget {
                                                               .plan !=
                                                           null)
                                                         Container(
-                                                          width: 80.w,
-                                                          height: 20.h,
                                                           decoration:
                                                               BoxDecoration(
                                                             color: AppColors
@@ -1364,28 +1362,61 @@ class MyAdsView extends StatelessWidget {
                                                                         10.r),
                                                             boxShadow: [
                                                               BoxShadow(
-                                                                color: AppColors
-                                                                    .grey,
+                                                                color: uploadAdsController
+                                                                            .allAdsList[
+                                                                                index]
+                                                                            .plan!
+                                                                            .id
+                                                                            .toString() ==
+                                                                        "2"
+                                                                    ? AppColors
+                                                                        .green
+                                                                    : uploadAdsController.allAdsList[index].plan!.id.toString() ==
+                                                                            "1"
+                                                                        ? Color(
+                                                                            0xffFBAA30)
+                                                                        : AppColors
+                                                                            .red,
                                                                 offset: Offset(
-                                                                    0, 1),
-                                                                blurRadius: 3,
+                                                                    0, 0),
+                                                                blurRadius: 2,
                                                               ),
                                                             ],
                                                           ),
-                                                          child: Center(
-                                                            child: CustomText(
-                                                                uploadAdsController
-                                                                    .allAdsList[
-                                                                        index]
-                                                                    .plan!
-                                                                    .title!,
-                                                                fontSize: 12.sp,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w400,
-                                                                // fontFamily: "tajawalb",
-                                                                color: Color(
-                                                                    0xff0E5400)),
+                                                          child: Padding(
+                                                            padding: EdgeInsets
+                                                                .symmetric(
+                                                                    horizontal:
+                                                                        5.w,
+                                                                    vertical:
+                                                                        3.h),
+                                                            child: Row(
+                                                              children: [
+                                                                CustomSvgImage(
+                                                                  imageName:
+                                                                      "taj",
+                                                                  color:
+                                                                      AppColors
+                                                                          .grey,
+                                                                  height: 10.h,
+                                                                ),
+                                                                SizedBox(
+                                                                  width: 5.w,
+                                                                ),
+                                                                CustomText(
+                                                                    uploadAdsController
+                                                                        .allAdsList[
+                                                                            index]
+                                                                        .plan!
+                                                                        .title!,
+                                                                    fontSize:
+                                                                        12.sp,
+
+                                                                    // fontFamily: "tajawalb",
+                                                                    color: AppColors
+                                                                        .grey),
+                                                              ],
+                                                            ),
                                                           ),
                                                         ),
                                                     ],

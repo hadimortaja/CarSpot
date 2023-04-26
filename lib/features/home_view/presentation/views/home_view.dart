@@ -783,7 +783,7 @@ class _HomeViewState extends State<HomeView> {
                                                       },
                                                       child: Container(
                                                         width: 115.w,
-                                                        height: 180.h,
+                                                        height: 150.h,
                                                         decoration:
                                                             BoxDecoration(
                                                           color: AppColors
@@ -993,56 +993,61 @@ class _HomeViewState extends State<HomeView> {
 //                                                                             .grey:AppColors.primaryColor,
 //                                                                       )),
 //                                                                 )
+                                                                Positioned(
+                                                                  bottom: -10.h,
+                                                                  child:
+                                                                      Container(
+                                                                    width:
+                                                                        115.w,
+                                                                    child:
+                                                                        Container(
+                                                                      width: Get
+                                                                          .width,
+                                                                      height:
+                                                                          20.h,
+                                                                      child: Row(
+                                                                          mainAxisAlignment:
+                                                                              MainAxisAlignment.center,
+                                                                          children: [
+                                                                            Container(
+                                                                              height: 20.h,
+                                                                              width: 60.w,
+                                                                              decoration: BoxDecoration(
+                                                                                color: AppColors.whiteColor,
+                                                                                borderRadius: BorderRadius.circular(11.r),
+                                                                                boxShadow: [
+                                                                                  BoxShadow(
+                                                                                    color: const Color(0x1aff0000),
+                                                                                    offset: Offset(0, 3),
+                                                                                    blurRadius: 1,
+                                                                                  ),
+                                                                                ],
+                                                                              ),
+                                                                              child: Center(
+                                                                                child: homeController.getMostPopularData.value.mostPobuler![index].products![index1].categoryId.toString() == "3"
+                                                                                    ? CustomText(
+                                                                                        homeController.getMostPopularData.value.mostPobuler![index].products![index1].simType.toString() == "1" ? "Etisalat" : "Du",
+                                                                                        fontSize: 10.sp,
+                                                                                        fontWeight: FontWeight.w400,
+                                                                                        color: AppColors.primaryColor,
+                                                                                      )
+                                                                                    : CustomText(
+                                                                                        SPHelper.spHelper.getLanguage() == "en" ? Helper.limitString(homeController.getMostPopularData.value.mostPobuler![index].products![index1].city!.nameEn.toString(), 10) : Helper.limitString(homeController.getMostPopularData.value.mostPobuler![index].products![index1].city!.name.toString(), 10) ?? "",
+                                                                                        fontSize: 10.sp,
+                                                                                        fontWeight: FontWeight.w400,
+                                                                                        color: AppColors.primaryColor,
+                                                                                      ),
+                                                                              ),
+                                                                            )
+                                                                          ]),
+                                                                    ),
+                                                                  ),
+                                                                ),
                                                               ],
                                                             ),
                                                             SizedBox(
                                                               height: 20.h,
                                                             ),
-                                                            homeController
-                                                                        .getMostPopularData
-                                                                        .value
-                                                                        .mostPobuler![
-                                                                            index]
-                                                                        .products![
-                                                                            index1]
-                                                                        .categoryId
-                                                                        .toString() ==
-                                                                    "3"
-                                                                ? CustomText(
-                                                                    homeController.getMostPopularData.value.mostPobuler![index].products![index1].simType.toString() ==
-                                                                            "1"
-                                                                        ? "Etisalat"
-                                                                        : "Du",
-                                                                    fontSize:
-                                                                        10.sp,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w400,
-                                                                    color: AppColors
-                                                                        .primaryColor,
-                                                                  )
-                                                                : CustomText(
-                                                                    SPHelper.spHelper.getLanguage() ==
-                                                                            "en"
-                                                                        ? homeController
-                                                                            .getMostPopularData
-                                                                            .value
-                                                                            .mostPobuler![
-                                                                                index]
-                                                                            .products![
-                                                                                index1]
-                                                                            .city!
-                                                                            .nameEn
-                                                                        : homeController.getMostPopularData.value.mostPobuler![index].products![index1].city!.name ??
-                                                                            "",
-                                                                    fontSize:
-                                                                        10.sp,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w400,
-                                                                    color: AppColors
-                                                                        .primaryColor,
-                                                                  ),
                                                             homeController
                                                                             .getMostPopularData
                                                                             .value
@@ -1146,9 +1151,7 @@ class _HomeViewState extends State<HomeView> {
                                                                         fontWeight:
                                                                             FontWeight.w400,
                                                                       ),
-                                                            SizedBox(
-                                                              height: 7.h,
-                                                            ),
+                                                            Spacer(),
                                                             Padding(
                                                               padding: EdgeInsets
                                                                   .symmetric(
@@ -1228,7 +1231,7 @@ class _HomeViewState extends State<HomeView> {
                                             ),
                                           ),
                                 SizedBox(
-                                  height: 12.h,
+                                  height: 5.h,
                                 )
                               ],
                             );

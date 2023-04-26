@@ -835,7 +835,7 @@ class _CarViewState extends State<CarView> with TickerProviderStateMixin {
                   ? TabBar(
                       onTap: (index) {
                         setState(() {
-                          homeController.allProductsList.clear();
+                          // homeController.allProductsList.clear();
                           indexTab = index;
                           getVendorsByCategoryDataSource(1, true, "6");
                           if (index == 0) {
@@ -1861,6 +1861,94 @@ class _CarViewState extends State<CarView> with TickerProviderStateMixin {
                                                                           fit: BoxFit
                                                                               .cover,
                                                                         ),
+                                                                        if (homeController.allProductsList[index].plan !=
+                                                                            null)
+                                                                          Positioned(
+                                                                            bottom:
+                                                                                -7.h,
+                                                                            child:
+                                                                                Container(
+                                                                              width: 343.w,
+                                                                           
+                                                                       
+                                                                              child:   Row(
+                                                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                                                  children: [
+                                                                                    Container(
+                                                                                      height: 20.h,
+                                                                                    
+                                                                                            decoration: BoxDecoration( 
+                                                                                                color: AppColors.whiteColor,
+                                                                                                borderRadius: BorderRadius.circular(11.r),
+                                                                                                boxShadow: [
+                                                              BoxShadow(
+                                                                color:homeController.allProductsList[index].plan!
+                                                                            .id
+                                                                            .toString() ==
+                                                                        "2"
+                                                                    ? AppColors
+                                                                        .green
+                                                                    : homeController.allProductsList[index].plan!.id.toString() ==
+                                                                            "1"
+                                                                        ? Color(
+                                                                            0xffFBAA30)
+                                                                        : AppColors
+                                                                            .red,
+                                                                offset: Offset(
+                                                                    0, 0),
+                                                                blurRadius: 2,
+                                                              ),
+                                                            ],),
+                                                                                      child: Padding(
+                                                                                          padding:   EdgeInsets.symmetric(horizontal: 5.w,
+                                                                                vertical: 3.h,),
+                                                                                        child: Row(
+                                                                                          children: [
+                                                                                            CustomSvgImage(
+                                                                                              imageName: "taj",
+                                                                                             color:homeController.allProductsList[index].plan!
+                                                                            .id
+                                                                            .toString() ==
+                                                                        "2"
+                                                                    ? AppColors
+                                                                        .green
+                                                                    : homeController.allProductsList[index].plan!.id.toString() ==
+                                                                            "1"
+                                                                        ? Color(
+                                                                            0xffFBAA30)
+                                                                        : AppColors
+                                                                            .red,
+                                                                                              height: 15.h,
+                                                                                            ),
+                                                                                            SizedBox(
+                                                                                              width: 5.w,
+                                                                                            ),
+                                                                                            CustomText(
+                                                                                              homeController.allProductsList[index].plan!.title!,
+                                                                                              fontSize: 12.sp,
+                                                                                            
+                                                                                             color:homeController.allProductsList[index].plan!
+                                                                            .id
+                                                                            .toString() ==
+                                                                        "2"
+                                                                    ? AppColors
+                                                                        .green
+                                                                    : homeController.allProductsList[index].plan!.id.toString() ==
+                                                                            "1"
+                                                                        ? Color(
+                                                                            0xffFBAA30)
+                                                                        : AppColors
+                                                                            .red,
+                                                                                            ),
+                                                                                          ],
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          
                                                                         // if (homeController.allProductsList[index].plan !=
                                                                         //     null)
                                                                         //   Positioned(
@@ -1894,7 +1982,6 @@ class _CarViewState extends State<CarView> with TickerProviderStateMixin {
                                                                         //       ),
                                                                         //     ),
                                                                         //   )
-                                                                    
                                                                       ],
                                                                     ),
                                                       if (homeController
@@ -1970,40 +2057,6 @@ class _CarViewState extends State<CarView> with TickerProviderStateMixin {
                                                   SizedBox(
                                                     height: 10.h,
                                                   ),
-                                                  if (homeController
-                                                          .allProductsList[
-                                                              index]
-                                                          .plan !=
-                                                      null)
-                                                    Row(
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .center,
-                                                      children: [
-                                                        CustomSvgImage(
-                                                          imageName: "taj",
-                                                          color:
-                                                              AppColors.green,
-                                                          height: 15.h,
-                                                        ),
-                                                        SizedBox(
-                                                          width: 5.w,
-                                                        ),
-                                                        CustomText(
-                                                          homeController
-                                                              .allProductsList[
-                                                                  index]
-                                                              .plan!
-                                                              .title!,
-                                                          fontSize: 12.sp,
-                                                          fontWeight:
-                                                              FontWeight.w400,
-                                                          color:
-                                                              AppColors.green,
-                                                        ),
-                                                      ],
-                                                    ),
-                                                
                                                   Padding(
                                                     padding:
                                                         EdgeInsets.symmetric(
