@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "212651884840",
+    "project_id": "cardeal-e4097",
+    "storage_bucket": "cardeal-e4097.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212651884840:android:a4510d8e5bbe20e399501d",
+        "android_client_info": {
+          "package_name": "com.application.cardeal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212651884840-9qs3vr96lfkl222naos4nblahqcthboa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1OKGIb-wzJlX-wELujdFe9Qcms0a0Lkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "212651884840-9qs3vr96lfkl222naos4nblahqcthboa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

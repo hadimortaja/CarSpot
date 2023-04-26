@@ -1,0 +1,6 @@
+package com.application.cardeal
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
