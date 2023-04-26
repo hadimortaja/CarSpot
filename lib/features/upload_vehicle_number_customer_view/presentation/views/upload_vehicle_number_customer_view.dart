@@ -898,6 +898,7 @@ class UploadVehicleNumberCustomerView extends StatelessWidget {
                                                                                                                               crossAxisAlignment: CrossAxisAlignment.end,
                                                                                                                               mainAxisAlignment: MainAxisAlignment.center,
                                                                                                                               children: [
+                                                                                                                             
                                                                                                                                 CustomText(
                                                                                                                                   uploadAdsController.vNumber,
                                                                                                                                   fontSize: 35.sp,
@@ -909,6 +910,9 @@ class UploadVehicleNumberCustomerView extends StatelessWidget {
                                                                                                                                   uploadAdsController.codeV,
                                                                                                                                   fontSize: 35.sp,
                                                                                                                                   color: AppColors.black,
+                                                                                                                                ),
+                                                                                                                                   SizedBox(
+                                                                                                                                  width: 40.w,
                                                                                                                                 ),
                                                                                                                               ],
                                                                                                                             ),
@@ -954,10 +958,11 @@ class UploadVehicleNumberCustomerView extends StatelessWidget {
                                                                     ? Container(
                                                                         // color: AppColors
                                                                         //     .red,
-                                                                        width:
-                                                                            320.w,
+                                                                        width: Get
+                                                                            .width,
                                                                         height:
                                                                             80.h,
+                                                                        // color: AppColors.red,
                                                                         child:
                                                                             Row(
                                                                           mainAxisAlignment:
@@ -975,7 +980,7 @@ class UploadVehicleNumberCustomerView extends StatelessWidget {
                                                                             //   width: 20.h,
                                                                             // ),
                                                                             CustomText(
-                                                                            uploadAdsController.vNumber,
+                                                                              uploadAdsController.vNumber,
                                                                               fontSize: 24.sp,
                                                                               color: AppColors.black,
                                                                             ),
@@ -1060,23 +1065,21 @@ class UploadVehicleNumberCustomerView extends StatelessWidget {
                                                                                       ),
                                                                                     ),
                                                                                   )
-                                                                                : authController.getCitiesSelect.value.id.toString() == "5"
+                                                                                : authController.getCitiesSelect.value.id.toString() == "5" && SPHelper.spHelper.getLanguage() == "en"
                                                                                     ? Container(
                                                                                         width: 372.w,
-                                                                                        height: 80.h,
+                                                                                        height: 70.h,
                                                                                         child: Row(
+                                                                                          mainAxisAlignment: MainAxisAlignment.center,
                                                                                           crossAxisAlignment: CrossAxisAlignment.end,
                                                                                           children: [
+                                                                                            // CustomText(
+                                                                                            //   uploadAdsController.codeV,
+                                                                                            //   fontSize: 24.sp,
+                                                                                            //   color: AppColors.black,
+                                                                                            // ),
                                                                                             SizedBox(
-                                                                                              width: 30.h,
-                                                                                            ),
-                                                                                            CustomText(
-                                                                                              uploadAdsController.codeV,
-                                                                                              fontSize: 24.sp,
-                                                                                              color: AppColors.black,
-                                                                                            ),
-                                                                                            SizedBox(
-                                                                                              width: 150.h,
+                                                                                              width: 50.h,
                                                                                             ),
                                                                                             CustomText(
                                                                                               uploadAdsController.vNumber,
@@ -1085,55 +1088,79 @@ class UploadVehicleNumberCustomerView extends StatelessWidget {
                                                                                           ],
                                                                                         ),
                                                                                       )
-                                                                                    : authController.getCitiesSelect.value.id.toString() == "6"
+                                                                                    : authController.getCitiesSelect.value.id.toString() == "5" && SPHelper.spHelper.getLanguage() == "ar"
                                                                                         ? Container(
                                                                                             width: 372.w,
-                                                                                            height: 80.h,
+                                                                                            height: 70.h,
                                                                                             child: Row(
+                                                                                              mainAxisAlignment: MainAxisAlignment.center,
+                                                                                              crossAxisAlignment: CrossAxisAlignment.end,
                                                                                               children: [
-                                                                                                SizedBox(
-                                                                                                  width: 20.h,
-                                                                                                ),
-                                                                                                CustomText(
-                                                                                                  uploadAdsController.codeV,
-                                                                                                  fontSize: 24.sp,
-                                                                                                  color: AppColors.black,
-                                                                                                ),
-                                                                                                SizedBox(
-                                                                                                  width: 130.h,
-                                                                                                ),
+                                                                                                // CustomText(
+                                                                                                //   uploadAdsController.codeV,
+                                                                                                //   fontSize: 24.sp,
+                                                                                                //   color: AppColors.black,
+                                                                                                // ),
+
                                                                                                 CustomText(
                                                                                                   uploadAdsController.vNumber,
                                                                                                   fontSize: 24.sp,
                                                                                                 ),
+                                                                                                SizedBox(
+                                                                                                  width: 50.h,
+                                                                                                ),
                                                                                               ],
                                                                                             ),
                                                                                           )
-                                                                                        : authController.getCitiesSelect.value.id.toString() == "8"
+                                                                                        : authController.getCitiesSelect.value.id.toString() == "6"
                                                                                             ? Container(
                                                                                                 width: 372.w,
-                                                                                                height: 100.h,
+                                                                                                height: 80.h,
                                                                                                 child: Row(
-                                                                                                  crossAxisAlignment: CrossAxisAlignment.end,
-                                                                                                  mainAxisAlignment: MainAxisAlignment.center,
                                                                                                   children: [
+                                                                                                    SizedBox(
+                                                                                                      width: 20.h,
+                                                                                                    ),
                                                                                                     CustomText(
                                                                                                       uploadAdsController.codeV,
                                                                                                       fontSize: 24.sp,
                                                                                                       color: AppColors.black,
                                                                                                     ),
                                                                                                     SizedBox(
-                                                                                                      width: 20.h,
+                                                                                                      width: 130.h,
                                                                                                     ),
                                                                                                     CustomText(
                                                                                                       uploadAdsController.vNumber,
                                                                                                       fontSize: 24.sp,
-                                                                                                      color: AppColors.whiteColor,
                                                                                                     ),
                                                                                                   ],
                                                                                                 ),
                                                                                               )
-                                                                                            : SizedBox()
+                                                                                            : authController.getCitiesSelect.value.id.toString() == "8"
+                                                                                                ? Container(
+                                                                                                    width: 372.w,
+                                                                                                    height: 100.h,
+                                                                                                    child: Row(
+                                                                                                      crossAxisAlignment: CrossAxisAlignment.end,
+                                                                                                      mainAxisAlignment: MainAxisAlignment.center,
+                                                                                                      children: [
+                                                                                                        CustomText(
+                                                                                                          uploadAdsController.codeV,
+                                                                                                          fontSize: 24.sp,
+                                                                                                          color: AppColors.black,
+                                                                                                        ),
+                                                                                                        SizedBox(
+                                                                                                          width: 20.h,
+                                                                                                        ),
+                                                                                                        CustomText(
+                                                                                                          uploadAdsController.vNumber,
+                                                                                                          fontSize: 24.sp,
+                                                                                                          color: AppColors.whiteColor,
+                                                                                                        ),
+                                                                                                      ],
+                                                                                                    ),
+                                                                                                  )
+                                                                                                : SizedBox()
                                                   ],
                                                 ),
                                               )),

@@ -159,6 +159,7 @@ class _CarAdSaleViewState extends State<CarAdSaleView> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Stack(
+                    clipBehavior: Clip.none,
                     children: [
                       homeController.getProductByIdData.value.data!.category!.id
                                   .toString() ==
@@ -368,7 +369,86 @@ class _CarAdSaleViewState extends State<CarAdSaleView> {
                             ],
                           ),
                         ),
-                      )
+                      ),
+                      // Positioned(
+                      //   bottom: -10.h,
+                      //   child: Container(
+                      //     width: Get.width,
+                      //     child: Row(
+                      //       mainAxisAlignment: MainAxisAlignment.center,
+                      //       children: [
+                      //         Container(
+                      //           height: 20.h,
+                      //           decoration: BoxDecoration(
+                      //             color: AppColors.whiteColor,
+                      //             borderRadius: BorderRadius.circular(11.r),
+                      //             boxShadow: [
+                      //               BoxShadow(
+                      //                 color: homeController.getProductByIdData
+                      //                             .value.data!.plan!.id
+                      //                             .toString() ==
+                      //                         "2"
+                      //                     ? AppColors.green
+                      //                     : homeController.getProductByIdData
+                      //                                 .value.data!.plan!.id
+                      //                                 .toString() ==
+                      //                             "1"
+                      //                         ? Color(0xffFBAA30)
+                      //                         : AppColors.red,
+                      //                 offset: Offset(0, 0),
+                      //                 blurRadius: 2,
+                      //               ),
+                      //             ],
+                      //           ),
+                      //           child: Padding(
+                      //             padding: EdgeInsets.symmetric(
+                      //               horizontal: 5.w,
+                      //               vertical: 3.h,
+                      //             ),
+                      //             child: Row(
+                      //               children: [
+                      //                 CustomSvgImage(
+                      //                   imageName: "taj",
+                      //                   color: homeController.getProductByIdData
+                      //                               .value.data!.plan!.id
+                      //                               .toString() ==
+                      //                           "2"
+                      //                       ? AppColors.green
+                      //                       : homeController.getProductByIdData
+                      //                                   .value.data!.plan!.id
+                      //                                   .toString() ==
+                      //                               "1"
+                      //                           ? Color(0xffFBAA30)
+                      //                           : AppColors.red,
+                      //                   height: 15.h,
+                      //                 ),
+                      //                 SizedBox(
+                      //                   width: 5.w,
+                      //                 ),
+                      //                 CustomText(
+                      //                   homeController.getProductByIdData.value
+                      //                       .data!.plan!.title,
+                      //                   fontSize: 12.sp,
+                      //                   color: homeController.getProductByIdData
+                      //                               .value.data!.plan!.id
+                      //                               .toString() ==
+                      //                           "2"
+                      //                       ? AppColors.green
+                      //                       : homeController.getProductByIdData
+                      //                                   .value.data!.plan!.id
+                      //                                   .toString() ==
+                      //                               "1"
+                      //                           ? Color(0xffFBAA30)
+                      //                           : AppColors.red,
+                      //                 ),
+                      //               ],
+                      //             ),
+                      //           ),
+                      //         ),
+                      //       ],
+                      //     ),
+                      //   ),
+                      // )
                     ],
                   ),
                   SizedBox(
@@ -527,26 +607,27 @@ class _CarAdSaleViewState extends State<CarAdSaleView> {
                       SizedBox(
                         height: 27.h,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          CustomSvgImage(
-                            imageName: "taj",
-                            color: AppColors.green,
-                            height: 15.h,
-                          ),
-                          SizedBox(
-                            width: 5.w,
-                          ),
-                          CustomText(
-                            homeController
-                                .getProductByIdData.value.data!.plan!.title,
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w400,
-                            color: AppColors.green,
-                          ),
-                        ],
-                      ),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.center,
+                      //   children: [
+                      //     CustomSvgImage(
+                      //       imageName: "taj",
+                      //       color: AppColors.green,
+                      //       height: 15.h,
+                      //     ),
+                      //     SizedBox(
+                      //       width: 5.w,
+                      //     ),
+                      //     CustomText(
+                      //       homeController
+                      //           .getProductByIdData.value.data!.plan!.title,
+                      //       fontSize: 14.sp,
+                      //       fontWeight: FontWeight.w400,
+                      //       color: AppColors.green,
+                      //     ),
+                      //   ],
+                      // ),
+
                       Divider(),
                       SizedBox(
                         height: 24.h,

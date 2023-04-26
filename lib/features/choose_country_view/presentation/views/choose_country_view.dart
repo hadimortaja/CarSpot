@@ -173,24 +173,34 @@ class ChooseCountryView extends StatelessWidget {
                                                       MainAxisAlignment
                                                           .spaceBetween,
                                                   children: [
-                                                    CustomText(
-                                                      SPHelper.spHelper
-                                                                  .getLanguage() ==
-                                                              "en"
-                                                          ? authController
-                                                              .getCitiesData
-                                                              .value
-                                                              .data![index]
-                                                              .nameEn
-                                                          : authController
-                                                              .getCitiesData
-                                                              .value
-                                                              .data![index]
-                                                              .name,
-                                                      fontSize: 12.sp,
-                                                      fontWeight:
-                                                          FontWeight.w400,
-                                                    ),
+                                                    if (authController
+                                                            .getCitiesData
+                                                            .value
+                                                            .data![index]
+                                                            .nameEn !=
+                                                        null&&authController
+                                                                .getCitiesData
+                                                                .value
+                                                                .data![index]
+                                                                .name!=null)
+                                                      CustomText(
+                                                        SPHelper.spHelper
+                                                                    .getLanguage() ==
+                                                                "en"
+                                                            ? authController
+                                                                .getCitiesData
+                                                                .value
+                                                                .data![index]
+                                                                .nameEn
+                                                            : authController
+                                                                .getCitiesData
+                                                                .value
+                                                                .data![index]
+                                                                .name,
+                                                        fontSize: 12.sp,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                      ),
                                                     Icon(
                                                       Icons.check,
                                                       size: 20.r,

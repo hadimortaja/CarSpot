@@ -783,7 +783,7 @@ class _HomeViewState extends State<HomeView> {
                                                       },
                                                       child: Container(
                                                         width: 115.w,
-                                                        height: 150.h,
+                                                        height: 180.h,
                                                         decoration:
                                                             BoxDecoration(
                                                           color: AppColors
